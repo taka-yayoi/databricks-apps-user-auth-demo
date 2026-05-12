@@ -1,0 +1,5 @@
+streamlit>=1.40.0
+databricks-sql-connector>=3.5.0
+databricks-sdk>=0.40.0
+pandas>=2.0.0
+pyarrow>=15.0.0

@@ -1,0 +1,19 @@
+# Databricks Apps 設定ファイル
+# https://learn.microsoft.com/ja-jp/azure/databricks/dev-tools/databricks-apps/app-runtime
+#
+# 注: ユーザー認可スコープ ( sql, dashboards.genie 等 ) は app.yaml では
+# 宣言できません。アプリ編集画面の「User authorization」セクションから
+# UI で追加するか、DAB (databricks.yml) で宣言します。
+
+command:
+  - "streamlit"
+  - "run"
+  - "app.py"
+
+env:
+  # SQL Warehouse の HTTP Path をリソースから注入
+  # ( アプリの Resources で Resource key を "sql_warehouse" に設定する必要がある )
+  - name: "DATABRICKS_WAREHOUSE_HTTP_PATH"
+    valueFrom: "sql_warehouse"
+  - name: "DEMO_TABLE"
+    value: "main.app_auth_demo.sales_data"
