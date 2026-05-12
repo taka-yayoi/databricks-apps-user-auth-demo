@@ -127,7 +127,7 @@ databricks apps start auth-demo
 | クエリで `current_user()` が SP の UUID を返す | ユーザートークンを `sql.connect()` の `access_token=` に渡せていない |
 | `x-forwarded-access-token` が `None` | スコープ未設定 / 再起動前 / ローカル開発 ( Apps 環境のみ転送される ) |
 
-詳細な解説と全項目は Qiita 記事を参照してください ( URL は記事公開時に追記 )。
+詳細な解説と全項目は [Qiita 記事](https://qiita.com/taka_yayoi/items/ad7330438c7d6f91d37f)を参照してください。
 
 ## 参考リンク
 
